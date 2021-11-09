@@ -36,8 +36,18 @@ import time
 from Colors import *
 from Controller import *
 
-while(1):
-    Controller.SetAllColor(Color.Red)
-    time.sleep(1)
-    Controller.SetAllColor(Color.Green)
-    time.sleep(1)
+while 1:
+    # Demo the AllColorCycle function
+    for _ in range(5):
+        Controller.AllColorCycle(0.005)
+    
+    # Demo the ColorCycle function
+    for _ in range(5):
+        Controller.ColorCycle(0.001)
+
+    # Demo the SetAllColor function
+    for _ in range(5):
+        Controller.SetAllColor(Color.Red)
+        time.sleep(1)
+        Controller.SetAllColor(Color.Green)
+        time.sleep(1)
