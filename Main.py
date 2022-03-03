@@ -32,22 +32,52 @@
     depending on your environment. Be sure to use Python version >= 3
 ===================================================================+"""
 
+import sys
 import time
 from Colors import *
 from Controller import *
 
-while 1:
-    # Demo the AllColorCycle function
-    for _ in range(5):
-        Controller.AllColorCycle(0.005)
-    
-    # Demo the ColorCycle function
-    for _ in range(5):
-        Controller.ColorCycle(0.001)
+n = len(sys.argv)
+if(n > 1) :
+    mode = sys.argv[1]
 
-    # Demo the SetAllColor function
-    for _ in range(5):
+match mode:
+    case 0:
+        Controller.SetAllColor(Color.White)
+    case "Red":
         Controller.SetAllColor(Color.Red)
-        time.sleep(1)
+    case "Green":
         Controller.SetAllColor(Color.Green)
-        time.sleep(1)
+    case "Blue":
+        Controller.SetAllColor(Color.Blue)
+    case "Gray":
+        Controller.SetAllColor(Color.Gray)
+    case "Wheat":
+        Controller.SetAllColor(Color.Wheat)
+    case "AliceBlue":
+        Controller.SetAllColor(Color.AliceBlue)
+    case "Aqua":
+        Controller.SetAllColor(Color.Aqua)
+    case "Aquamarine":
+        Controller.SetAllColor(Color.Aquamarine)
+    case "Azure":
+        Controller.SetAllColor(Color.Azure)
+    case "Beige":
+        Controller.SetAllColor(Color.Beige)
+    case _:
+        Controller.SetAllColor(Color.White)
+
+# Demo the AllColorCycle function
+# for _ in range(5):
+#     Controller.AllColorCycle(0.005)
+
+# Demo the ColorCycle function
+# for _ in range(5):
+#     Controller.ColorCycle(0.001)
+
+# # Demo the SetAllColor function
+# for _ in range(5):
+#     Controller.SetAllColor(Color.Red)
+#     time.sleep(1)
+#     Controller.SetAllColor(Color.Green)
+#     time.sleep(1)

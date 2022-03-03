@@ -29,7 +29,7 @@ CHANNEL_ID = 1
 ENDIANNESS = "little"
 
 # Modify these values based on your specific hardware and network setup
-LED_COUNT = 50
+LED_COUNT = 505
 CLIENTS = [
-    "192.168.0.25"
-]
+    "192.168.1.253"
+]   
